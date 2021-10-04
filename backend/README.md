@@ -9,7 +9,7 @@ Run: `npm start` to run in production mode
 
 ## Description:
 
-Models API was introduced to provide a means to manage the models available on the website. This is used for the display of the frontend dashboard, MultiChatbotInterface and the MassComparison page.
+Models API was introduced to provide a means to manage the models available on the website. This is used for the display of the frontend dashboard, MultiChatbotInterface and the MassComparison page. This is so that the 3 pages, will display according to the model information taken from the models API instead of declaring explicitly.
 
 ## Tools used
 
@@ -24,9 +24,9 @@ Postman can be used to make API calls, use to add models data into the database.
 Models APIs is available on the backend/routes/generalModel.js
 
 **Methods**<br/>
-“/”: return a list of models
-“/new”: create model, if model name exists, it will overwrite data in the model_endpoint with the new content.
-“/deleteAll”: delete all entries.
+“/”: return a list of models <br/>
+“/new”: create model, if model name exists, it will overwrite data in the model_endpoint with the new content. <br/>
+“/deleteAll”: delete all entries. <br/>
 
 ## Setup - creating model data during initialization
 
@@ -59,7 +59,7 @@ Model_endpoint store the topic that the model supports, it will be used to check
 
 Topic_endpoint points to the backend address of the model, it is used on frontend dashboard code to make API call to the backend for query response. 3. Click on “Send”. <br/>
 
-To note:
+**To Note**<br/>
 
 1. Ensure “AskJamie” is the first entry, this affects the ordering on the frontend display.
 2. Do ensure “AskJamie” is saved as ‘AskJamie”.
@@ -89,11 +89,10 @@ In the body, format:
 }
 ```
 
-**Steps to add model topic on Frontend: s**<br/>
+**Steps to add model topic on Frontend:**<br/>
 
 1. Access frontend/src/dashboard/components/TopicSelection.jsx<br/>
 2. Add in the new topic information under the menu. <br/>
-   E.g
 
 ```bash
 <MenuItem id={"TopicName”}
